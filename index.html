@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>body{margin:0}[hidden]{display:none!important}</style>
+<title>Five Clinic Noivas</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Five Clinic · Remoção de tatuagem e micropigmentação a laser em Governador Valadares com a Dra. Anna Luíza Cardoso. Protocolo Five para noivas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Jost:wght@300;400;500;600&family=Pinyon+Script&display=swap">
+<style>
+/* Layout: editorial em arcos (como os espelhos da clínica), bandas alternadas areia/chocolate, brilho champanhe só nos pontos de conversão */
+:root{
+  --ivory:#FBF7F2;      /* fundo principal */
+  --sand:#EFE4D7;       /* nude dos destaques */
+  --taupe:#A48E7C;      /* taupe dos destaques */
+  --caramel:#9A6B45;    /* madeira da clínica */
+  --cocoa:#3B2A20;      /* chocolate do logo */
+  --ink:#2A1E17;        /* texto */
+  --muted:#6F5C4F;
+  --gold-1:#B98F54; --gold-2:#E9D3A1; --gold-3:#A57A3E;
+  --line:rgba(59,42,32,.14);
+  --f-display:"Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+  --f-body:"Jost", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --f-script:"Pinyon Script", "Snell Roundhand", "Brush Script MT", cursive;
+  --gold: linear-gradient(110deg,var(--gold-3) 0%,var(--gold-1) 22%,var(--gold-2) 45%,var(--gold-1) 62%,var(--gold-3) 100%);
+  --r-arch: 999px 999px 18px 18px;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ivory);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.65;font-weight:400;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--ivory)}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.08;text-wrap:balance;margin:0;color:var(--cocoa)}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.eyebrow{font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;color:var(--caramel);display:inline-flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--gold)}
+.script{font-family:var(--f-script);font-weight:400;font-size:1.25em;line-height:.8;letter-spacing:0}
+.shine{background:var(--gold);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sheen 6s ease-in-out infinite}
+.shine-d{background:linear-gradient(110deg,#7E5528 0%,#A9783F 30%,#C9A062 50%,#A9783F 70%,#7E5528 100%);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sheen 6s ease-in-out infinite}
+@keyframes sheen{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.sec{padding-block:clamp(72px,10vw,128px)}
+.sec-head{display:grid;gap:18px;max-width:720px;margin-bottom:clamp(36px,5vw,56px)}
+.sec-head h2{font-size:clamp(34px,5vw,56px)}
+.sec-head p{color:var(--muted);max-width:60ch}
+.center{text-align:center;margin-inline:auto;justify-items:center}
+
+/* Botões */
+.btn{--h:54px;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:var(--h);padding:0 28px;border-radius:999px;font:500 15px/1 var(--f-body);letter-spacing:.06em;text-decoration:none;cursor:pointer;border:0;position:relative;overflow:hidden;transition:transform .25s ease, box-shadow .25s ease;white-space:nowrap}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-gold{background:var(--gold);background-size:200% 100%;color:#2B1D12;box-shadow:0 10px 28px -10px rgba(165,122,62,.65), inset 0 1px 0 rgba(255,255,255,.55)}
+.btn-gold::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.75),transparent);transform:skewX(-20deg);animation:sweep 4.5s ease-in-out infinite}
+@keyframes sweep{0%,60%{left:-60%}100%{left:130%}}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 34px -12px rgba(165,122,62,.8), inset 0 1px 0 rgba(255,255,255,.55)}
+.btn-ghost{background:transparent;color:var(--cocoa);box-shadow:inset 0 0 0 1px rgba(59,42,32,.35)}
+.btn-ghost:hover{box-shadow:inset 0 0 0 1px var(--cocoa);transform:translateY(-2px)}
+.btn-light{background:var(--ivory);color:var(--cocoa)}
+:focus-visible{outline:2px solid var(--gold-1);outline-offset:3px}
+
+/* Header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(251,247,242,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:72px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--cocoa)}
+.logo-mark{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--cocoa);color:var(--gold-2);font:500 17px/1 var(--f-display);font-style:italic;box-shadow:inset 0 0 0 1px rgba(233,211,161,.45)}
+.logo-txt{display:grid;line-height:1}
+.logo-txt b{font:500 22px/1 var(--f-display);letter-spacing:.32em}
+.logo-txt small{font-size:9.5px;letter-spacing:.52em;text-transform:uppercase;color:var(--caramel);margin-top:5px}
+.nav{display:flex;gap:30px;font-size:14px;letter-spacing:.06em}
+.nav a{text-decoration:none;color:var(--muted);transition:color .2s}
+.nav a:hover{color:var(--cocoa)}
+.top .btn{--h:44px;padding:0 20px;font-size:13.5px}
+@media (max-width:980px){.nav{display:none}}
+@media (max-width:420px){.top .btn span{display:none}.top .btn{padding:0 14px}}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(1100px 520px at 85% 10%, rgba(233,211,161,.35), transparent 60%),
+  radial-gradient(800px 500px at 0% 100%, rgba(164,142,124,.22), transparent 60%), var(--ivory)}
+#sparkle{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(32px,6vw,80px);align-items:center;padding-block:clamp(48px,7vw,96px) clamp(64px,8vw,110px)}
+.hero h1{font-size:clamp(44px,6.6vw,86px);letter-spacing:-.01em;margin:22px 0 24px}
+.hero h1 em{font-style:italic}
+.hero h1 .script{display:inline-block;font-size:1.18em;margin-right:.08em;transform:translateY(.06em)}
+.hero-lead{font-size:clamp(17px,1.6vw,19px);color:var(--muted);max-width:52ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.hero-proof{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:34px;font-size:13.5px;color:var(--muted)}
+.hero-proof span{display:inline-flex;align-items:center;gap:8px}
+.hero-proof svg{width:16px;height:16px;color:var(--gold-1)}
+.hero-art{position:relative;justify-self:center;width:min(100%,460px)}
+.arch{border-radius:var(--r-arch);overflow:hidden;position:relative;aspect-ratio:3/4;max-width:100%;background:var(--sand)}
+.arch img{width:100%;height:100%;object-fit:cover}
+.hero-art .arch{box-shadow:0 40px 80px -40px rgba(59,42,32,.55)}
+.hero-art::before{content:"";position:absolute;inset:-14px -14px auto auto;width:100%;height:100%;border-radius:var(--r-arch);border:1px solid var(--gold-1);opacity:.7;z-index:-1}
+.float-card{position:absolute;left:-34px;bottom:44px;background:rgba(251,247,242,.94);backdrop-filter:blur(8px);border-radius:16px;padding:12px;display:flex;gap:12px;align-items:center;box-shadow:0 24px 48px -24px rgba(59,42,32,.55);max-width:250px}
+.float-card img{width:64px;height:78px;object-fit:cover;border-radius:10px}
+.float-card b{display:block;font:500 22px/1.05 var(--f-display);color:var(--cocoa)}
+.float-card small{font-size:12px;color:var(--muted);line-height:1.35;display:block;margin-top:4px}
+.badge-round{position:absolute;right:-18px;top:30px;width:112px;height:112px;border-radius:50%;background:var(--cocoa);color:var(--gold-2);display:grid;place-items:center;text-align:center;font-size:10px;letter-spacing:.2em;text-transform:uppercase;line-height:1.5;box-shadow:0 20px 40px -18px rgba(59,42,32,.7)}
+.badge-round b{display:block;font:italic 400 26px/1 var(--f-display);letter-spacing:0;text-transform:none;margin-bottom:2px}
+@media (max-width:900px){
+  .hero .wrap{grid-template-columns:1fr}
+  .hero-art{width:min(86%,420px);margin-top:10px}
+  .float-card{left:-16px}
+  .badge-round{right:-10px;width:96px;height:96px}
+}
+
+/* Faixa de confiança */
+.trust{background:var(--cocoa);color:var(--sand)}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.trust-item{padding:28px 22px;display:grid;gap:6px;border-left:1px solid rgba(239,228,215,.14)}
+.trust-item:first-child{border-left:0}
+.trust-item b{font:400 22px/1.15 var(--f-display);color:var(--ivory)}
+.trust-item span{font-size:13.5px;color:#CDBBA9;line-height:1.45}
+@media (max-width:860px){.trust .wrap{grid-template-columns:1fr 1fr}.trust-item:nth-child(3){border-left:0}.trust-item{border-top:1px solid rgba(239,228,215,.14)}.trust-item:nth-child(-n+2){border-top:0}}
+
+/* Noivas */
+.bride{background:linear-gradient(180deg,var(--ivory),var(--sand))}
+.bride-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(36px,6vw,84px);align-items:start}
+.bride-visual{position:sticky;top:110px;display:grid;gap:16px}
+.bride-visual .arch{aspect-ratio:4/5}
+.bride-visual figcaption{font-size:13px;color:var(--muted);text-align:center}
+.areas{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:30px 0 8px}
+.area{background:var(--ivory);border:1px solid var(--line);border-radius:16px;padding:18px 18px 16px;display:grid;gap:4px}
+.area b{font:500 19px/1.2 var(--f-display);color:var(--cocoa)}
+.area span{font-size:14px;color:var(--muted);line-height:1.5}
+.planner{margin-top:34px;background:var(--cocoa);color:var(--sand);border-radius:24px;padding:clamp(24px,4vw,36px);position:relative;overflow:hidden}
+.planner::before{content:"";position:absolute;inset:0;background:radial-gradient(500px 220px at 100% 0%,rgba(233,211,161,.22),transparent 70%);pointer-events:none}
+.planner h3{color:var(--ivory);font-size:clamp(26px,3vw,32px)}
+.planner p.sub{color:#CDBBA9;font-size:15px;margin-top:8px}
+.planner-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px;align-items:flex-end}
+.field{display:grid;gap:6px;flex:1 1 200px;min-width:0}
+.field label{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-2)}
+.field input{height:52px;border-radius:12px;border:1px solid rgba(233,211,161,.35);background:rgba(251,247,242,.06);color:var(--ivory);padding:0 14px;font:400 16px var(--f-body);color-scheme:dark;width:100%}
+.result{margin-top:22px;border-top:1px solid rgba(233,211,161,.2);padding-top:20px;display:grid;gap:14px}
+.result-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.result-num{font:italic 400 54px/1 var(--f-display)}
+.result-label{font-size:14px;color:#CDBBA9}
+.result h4{margin:0;font:500 20px/1.3 var(--f-display);color:var(--ivory)}
+.result p{font-size:15px;color:#E3D5C6}
+.result .btn{justify-self:start}
+.timeline{list-style:none;padding:0;margin:34px 0 0;display:grid;gap:0;position:relative}
+.timeline li{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:18px 0;border-top:1px solid var(--line)}
+.timeline li:last-child{border-bottom:1px solid var(--line)}
+.timeline .when{font:italic 400 20px/1.2 var(--f-display);color:var(--caramel)}
+.timeline b{display:block;font-weight:500;color:var(--cocoa);margin-bottom:2px}
+.timeline span{font-size:15px;color:var(--muted)}
+@media (max-width:900px){.bride-grid{grid-template-columns:1fr}.bride-visual{position:static;max-width:440px;margin-inline:auto;width:100%}}
+@media (max-width:520px){.areas{grid-template-columns:1fr}.timeline li{grid-template-columns:1fr;gap:4px}}
+
+/* Resultados */
+.results-top{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(30px,4vw,48px)}
+.results-top .sec-head{margin-bottom:0}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:transparent;border-radius:999px;padding:10px 18px;font:500 13.5px var(--f-body);color:var(--muted);cursor:pointer;letter-spacing:.04em;transition:all .2s}
+.chip[aria-pressed="true"]{background:var(--cocoa);color:var(--ivory);border-color:var(--cocoa)}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.ba{margin:0;border-radius:18px;overflow:hidden;background:var(--sand);position:relative;cursor:zoom-in;border:0;padding:0;text-align:left;font:inherit;color:inherit;display:block;width:100%}
+.ba img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .6s ease}
+.ba:hover img{transform:scale(1.04)}
+.ba .cap{position:absolute;left:10px;right:10px;bottom:10px;background:rgba(251,247,242,.94);border-radius:12px;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.ba .cap b{font:500 16px/1.1 var(--f-display);color:var(--cocoa)}
+.ba .cap span{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--caramel);white-space:nowrap}
+.ba .tag{position:absolute;top:10px;left:10px;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;background:var(--cocoa);color:var(--gold-2);border-radius:999px;padding:6px 10px}
+.disclaimer{margin-top:22px;font-size:12.5px;color:var(--muted)}
+@media (max-width:1000px){.gallery{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:700px){.gallery{grid-template-columns:repeat(2,1fr);gap:10px}.ba .cap{flex-direction:column;align-items:flex-start;gap:2px;padding:8px 10px}.ba .cap b{font-size:14.5px}.ba .cap span{font-size:10px}}
+
+/* Protocolo */
+.protocol{background:var(--cocoa);color:var(--sand);position:relative;overflow:hidden}
+.protocol h2{color:var(--ivory)}
+.protocol .sec-head p{color:#CDBBA9}
+.protocol .eyebrow{color:var(--gold-2)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.step{border-top:1px solid rgba(233,211,161,.35);padding-top:22px;display:grid;gap:10px;align-content:start}
+.step i{font:italic 400 44px/1 var(--f-display);font-style:italic;background:var(--gold);-webkit-background-clip:text;background-clip:text;color:transparent}
+.step b{font:400 23px/1.2 var(--f-display);color:var(--ivory)}
+.step span{font-size:15px;color:#CDBBA9}
+.protocol-photos{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;margin-top:clamp(40px,6vw,70px);align-items:stretch}
+.protocol-photos figure{margin:0;border-radius:20px;overflow:hidden;position:relative;min-height:320px}
+.protocol-photos img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.protocol-photos figcaption{position:absolute;left:16px;bottom:16px;right:16px;font-size:13px;color:var(--ivory);background:rgba(42,30,23,.55);backdrop-filter:blur(6px);padding:10px 14px;border-radius:12px}
+.quote-box{background:rgba(251,247,242,.05);border:1px solid rgba(233,211,161,.25);border-radius:20px;padding:clamp(24px,3vw,34px);display:grid;align-content:center;gap:16px}
+.quote-box p{font:italic 400 clamp(22px,2.4vw,28px)/1.35 var(--f-display);color:var(--ivory)}
+.quote-box small{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-2)}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr;gap:28px 20px}.protocol-photos{grid-template-columns:1fr}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+
+/* Serviços */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc{display:grid;gap:16px;align-content:start}
+.svc .arch{aspect-ratio:4/5}
+.svc b{font:400 26px/1.15 var(--f-display);color:var(--cocoa)}
+.svc p{font-size:15.5px;color:var(--muted)}
+.svc .more{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--caramel);text-decoration:none;font-weight:500}
+.svc .more:hover{color:var(--cocoa)}
+@media (max-width:900px){.services{grid-template-columns:1fr;max-width:480px;margin-inline:auto}}
+
+/* Dra */
+.doctor{background:var(--sand)}
+.doc-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(36px,6vw,84px);align-items:center}
+.doc-photos{position:relative;padding-right:18%;padding-bottom:12%}
+.doc-photos .main{border-radius:24px;overflow:hidden;aspect-ratio:4/5}
+.doc-photos .main img{width:100%;height:100%;object-fit:cover}
+.doc-photos .sub{position:absolute;right:0;bottom:0;width:44%;border-radius:var(--r-arch);overflow:hidden;aspect-ratio:3/4;border:6px solid var(--sand);box-shadow:0 30px 50px -30px rgba(59,42,32,.6)}
+.doc-photos .sub img{width:100%;height:100%;object-fit:cover}
+.doc-txt{display:grid;gap:20px}
+.doc-txt h2{font-size:clamp(36px,4.6vw,54px)}
+.doc-txt h2 small{display:block;font:500 13px/1.4 var(--f-body);letter-spacing:.22em;text-transform:uppercase;color:var(--caramel);margin-top:14px}
+.doc-txt p{color:var(--muted)}
+.creds{list-style:none;padding:0;margin:6px 0 0;display:grid;gap:12px}
+.creds li{display:flex;gap:14px;align-items:flex-start;font-size:15.5px}
+.creds svg{flex:none;width:22px;height:22px;color:var(--gold-3);margin-top:2px}
+.sign{font:400 46px/1 var(--f-script);color:var(--caramel)}
+@media (max-width:900px){.doc-grid{grid-template-columns:1fr}.doc-photos{max-width:480px;margin-inline:auto;width:100%}}
+
+/* Espaço */
+.space{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.space figure{margin:0;border-radius:var(--r-arch);overflow:hidden;aspect-ratio:3/4.2;max-width:100%}
+.space figure:nth-child(2){transform:translateY(40px)}
+.space img{width:100%;height:100%;object-fit:cover}
+@media (max-width:700px){.space{grid-template-columns:1fr 1fr}.space figure:nth-child(2){transform:none}.space figure:nth-child(3){display:none}}
+
+/* FAQ */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(30px,5vw,70px);align-items:start}
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 44px 22px 0;position:relative;font:400 21px/1.3 var(--f-display);color:var(--cocoa)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:6px;top:50%;width:14px;height:14px;margin-top:-7px;background:
+  linear-gradient(var(--caramel),var(--caramel)) center/14px 1.5px no-repeat,
+  linear-gradient(var(--caramel),var(--caramel)) center/1.5px 14px no-repeat;transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 22px;color:var(--muted);max-width:62ch}
+@media (max-width:900px){.faq-grid{grid-template-columns:1fr}}
+
+/* CTA final */
+.final{position:relative;overflow:hidden;background:var(--cocoa);color:var(--sand);text-align:center}
+.final canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.final .wrap{position:relative;z-index:1;display:grid;justify-items:center;gap:22px}
+.final h2{color:var(--ivory);font-size:clamp(38px,6vw,72px);max-width:16ch}
+.final p{color:#CDBBA9;max-width:54ch}
+.final .eyebrow{color:var(--gold-2)}
+.contact-row{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 34px;margin-top:10px;font-size:14.5px;color:#E3D5C6}
+.contact-row span{display:inline-flex;gap:8px;align-items:center}
+.contact-row svg{width:17px;height:17px;color:var(--gold-2)}
+.contact-row a{text-decoration:none}
+.contact-row a:hover{text-decoration:underline}
+
+footer{background:#2A1E17;color:#A8968A;font-size:13px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding-block:28px}
+footer .logo-txt b{color:var(--sand);font-size:18px}
+
+/* WhatsApp flutuante */
+.wa-float{position:fixed;right:max(18px,calc(env(safe-area-inset-right,0px) + 14px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:70;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:var(--gold);background-size:200% 100%;color:#2B1D12;box-shadow:0 16px 30px -10px rgba(59,42,32,.6);text-decoration:none;animation:pulse 3s ease-in-out infinite}
+.wa-float svg{width:28px;height:28px}
+@keyframes pulse{0%,100%{box-shadow:0 16px 30px -10px rgba(59,42,32,.6),0 0 0 0 rgba(185,143,84,.45)}50%{box-shadow:0 16px 30px -10px rgba(59,42,32,.6),0 0 0 12px rgba(185,143,84,0)}}
+
+/* Lightbox */
+.lb[hidden],.ba[hidden]{display:none!important}
+.lb{position:fixed;inset:0;z-index:90;background:rgba(32,22,16,.92);display:grid;place-items:center;padding:max(20px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(20px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.lb figure{margin:0;display:grid;gap:12px;justify-items:center;max-width:min(560px,100%)}
+.lb img{max-height:78vh;width:auto;border-radius:14px}
+.lb figcaption{color:var(--sand);font-size:14px;text-align:center}
+.lb button{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:max(14px,env(safe-area-inset-right,0px));width:46px;height:46px;border-radius:50%;border:1px solid rgba(233,211,161,.4);background:transparent;color:var(--ivory);font-size:24px;cursor:pointer}
+
+/* Reveal: visível em repouso, só um leve movimento */
+.rv{transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.pre{transform:translateY(18px)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv.pre{transform:none}html{scroll-behavior:auto}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.92 9.92 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.24 8.24 0 0 1 8.24 8.25c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.17.24-.64.8-.78.97-.14.17-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9L12 2Zm7 12 .9 2.6L22.5 17.5l-2.6.9L19 21l-.9-2.6-2.6-.9 2.6-.9L19 14Z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm-4-9 2.7 2.7L16.5 9"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M12 21s-7-6.1-7-11.5a7 7 0 1 1 14 0C19 14.9 12 21 12 21Zm0-9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Zm5 13.5a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM17.5 6.5h.01"/></symbol>
+</svg>
+
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#inicio" aria-label="Five Clinic, início">
+      <span class="logo-mark">F</span>
+      <span class="logo-txt"><b>FIVE</b><small>clinic</small></span>
+    </a>
+    <nav class="nav" aria-label="Seções">
+      <a href="#noivas">Noivas</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#protocolo">Protocolo Five</a>
+      <a href="#dra">Dra. Anna Luíza</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <a class="btn btn-gold" href="https://wa.me/5533984632079?text=Ol%C3%A1%2C%20Dra.%20Anna!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span>Agendar avaliação</span></a>
+  </div>
+</header>
+
+<main id="inicio">
+<!-- HERO -->
+<section class="hero">
+  <canvas id="sparkle" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Remoção de tatuagem a laser · Governador Valadares</span>
+      <h1><span class="script shine-d">Diga sim</span> com a pele que <em>você escolheu</em> levar ao altar.</h1>
+      <p class="hero-lead">Removemos ou clareamos tatuagens e micropigmentações com laser padrão-ouro e o Protocolo Five, criado para preservar a saúde da sua pele em cada sessão. Planeje com antecedência e chegue ao grande dia leve, livre e linda nas fotos.</p>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="https://wa.me/5533984632079?text=Ol%C3%A1%2C%20Dra.%20Anna!%20Vou%20me%20casar%20e%20quero%20avaliar%20a%20remo%C3%A7%C3%A3o%20da%20minha%20tatuagem." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Quero minha avaliação de noiva</a>
+        <a class="btn btn-ghost" href="#resultados">Ver antes e depois</a>
+      </div>
+      <div class="hero-proof">
+        <span><svg aria-hidden="true"><use href="#i-check"/></svg>Sem cicatrizes, sem lesões</span>
+        <span><svg aria-hidden="true"><use href="#i-check"/></svg>Dra. pós-graduada em Laser</span>
+        <span><svg aria-hidden="true"><use href="#i-check"/></svg>Plano individual para a sua data</span>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="arch"><img src="imagens/Dfrx-CfT4vz.jpg" alt="Dra. Anna Luíza Cardoso sorrindo na Five Clinic" fetchpriority="high"></div>
+      <div class="badge-round"><span><b>Five</b>laser<br>padrão-ouro</span></div>
+      <div class="float-card">
+        <img src="imagens/DfD8sI4OE7O.jpg" alt="Antes e depois de tatuagem no ombro">
+        <div><b>1 sessão</b><small>Tatuagem no ombro, sem cicatrizes e sem lesões</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONFIANÇA -->
+<section class="trust" aria-label="Diferenciais">
+  <div class="wrap">
+    <div class="trust-item"><b>Laser padrão-ouro</b><span>Tecnologia de ponta, recém-chegada à clínica</span></div>
+    <div class="trust-item"><b>Pele 100% saudável</b><span>Sem manchas, bolhas ou cicatrizes</span></div>
+    <div class="trust-item"><b>Zero pelos brancos</b><span>Na remoção de sobrancelha micropigmentada</span></div>
+    <div class="trust-item"><b>Pós-graduação em Laser</b><span>Estudo e congressos constantes</span></div>
+  </div>
+</section>
+
+<!-- NOIVAS -->
+<section class="sec bride" id="noivas">
+  <div class="wrap bride-grid">
+    <figure class="bride-visual rv">
+      <div class="arch"><img src="imagens/DQh43Phieyw.jpg" alt="Antes e depois de tatuagem nas costas com Protocolo Five"></div>
+      <figcaption>Costas · 3 sessões · pele 100% sem lesões</figcaption>
+    </figure>
+    <div>
+      <div class="sec-head">
+        <span class="eyebrow">Para noivas</span>
+        <h2>Seu vestido merece mostrar <span class="shine-d" style="font-style:italic">só você</span>.</h2>
+        <p>Decote nas costas, ombros à mostra, mãos em close na troca de alianças. A tatuagem que um dia fez sentido pode não combinar com o look que você sonhou. Com tempo e o protocolo certo, a gente remove ou clareia para que você se sinta à vontade em cada foto.</p>
+      </div>
+      <div class="areas">
+        <div class="area"><b>Costas e nuca</b><span>Para vestidos com decote profundo e penteados presos.</span></div>
+        <div class="area"><b>Colo e ombros</b><span>Tomara que caia, ombro a ombro e alças finas.</span></div>
+        <div class="area"><b>Punho e mãos</b><span>Os detalhes que aparecem no buquê e nas alianças.</span></div>
+        <div class="area"><b>Braços e antebraço</b><span>Mangas transparentes, rendas e fotos de perfil.</span></div>
+      </div>
+
+      <ol class="timeline">
+        <li><span class="when">Agora</span><div><b>Avaliação com a Dra. Anna</b><span>Analisamos cores, profundidade, área e a resposta da sua pele para definir se o caminho é remover ou clarear.</span></div></li>
+        <li><span class="when">Entre sessões</span><div><b>Tempo para o corpo trabalhar</b><span>O organismo precisa de semanas (não 30 dias) para eliminar os fragmentos de tinta. É nesse intervalo que o resultado acontece.</span></div></li>
+        <li><span class="when">Perto do sim</span><div><b>Última sessão com folga</b><span>Programamos a reta final para que a pele esteja íntegra e pronta para a maquiagem e para as fotos.</span></div></li>
+      </ol>
+
+      <div class="planner" aria-live="polite">
+        <h3>Quanto tempo falta para o seu sim?</h3>
+        <p class="sub">Coloque a data do casamento e veja como podemos planejar o seu tratamento.</p>
+        <div class="planner-row">
+          <div class="field">
+            <label for="wedding-date">Data do casamento</label>
+            <input type="date" id="wedding-date">
+          </div>
+        </div>
+        <div class="result" id="plan-result">
+          <div class="result-top"><span class="result-num shine" id="plan-months">12</span><span class="result-label" id="plan-unit">meses até o altar (exemplo)</span></div>
+          <h4 id="plan-title">Tempo ideal para buscar a remoção completa</h4>
+          <p id="plan-text">Com um ano pela frente, dá para seguir o protocolo com calma e respeitar o intervalo que a sua pele precisa entre as sessões. O número exato de sessões é definido na avaliação.</p>
+          <a class="btn btn-gold" id="plan-cta" href="https://wa.me/5533984632079?text=Ol%C3%A1%2C%20Dra.%20Anna!%20Vou%20me%20casar%20e%20quero%20planejar%20a%20remo%C3%A7%C3%A3o%20da%20minha%20tatuagem." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Enviar minha data no WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTADOS -->
+<section class="sec" id="resultados">
+  <div class="wrap">
+    <div class="results-top">
+      <div class="sec-head">
+        <span class="eyebrow">Antes e depois</span>
+        <h2>Resultados reais de pacientes da Five</h2>
+        <p>Toque em uma foto para ampliar. Cada tatuagem é única: a quantidade de tinta, as cores e a região do corpo mudam o número de sessões.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filtrar resultados">
+        <button class="chip" type="button" data-f="all" aria-pressed="true">Todos</button>
+        <button class="chip" type="button" data-f="tattoo" aria-pressed="false">Tatuagem</button>
+        <button class="chip" type="button" data-f="micro" aria-pressed="false">Sobrancelha</button>
+      </div>
+    </div>
+    <div class="gallery" id="gallery">
+      <button class="ba" type="button" data-f="tattoo"><span class="tag">Ombro</span><img src="imagens/DfD8sI4OE7O.jpg" alt="Antes e depois de frase tatuada no ombro, 1 sessão"><span class="cap"><b>Frase no ombro</b><span>1 sessão</span></span></button>
+      <button class="ba" type="button" data-f="tattoo"><span class="tag">Costas</span><img src="imagens/DQh43Phieyw.jpg" alt="Antes e depois de tatuagem nas costas, 3 sessões"><span class="cap"><b>Sol nas costas</b><span>3 sessões</span></span></button>
+      <button class="ba" type="button" data-f="tattoo"><span class="tag">Punho</span><img src="imagens/DfEBO2bujXz.jpg" alt="Antes e depois da palavra Família no punho, 4 sessões"><span class="cap"><b>Família</b><span>4 sessões</span></span></button>
+      <button class="ba" type="button" data-f="tattoo"><span class="tag">Braço</span><img src="imagens/DfD81Z2uMP_.jpg" alt="Antes e depois de desenhos delicados no braço, 3 sessões"><span class="cap"><b>Traços delicados</b><span>3 sessões</span></span></button>
+      <button class="ba" type="button" data-f="tattoo"><span class="tag">Antebraço</span><img src="imagens/DfD-TiuOZ1u.jpg" alt="Antes e depois da palavra Brightside no antebraço, 3 sessões"><span class="cap"><b>Brightside</b><span>3 sessões</span></span></button>
+      <button class="ba" type="button" data-f="tattoo"><span class="tag">Antebraço</span><img src="imagens/Dfv1lfyzkbJ.jpg" alt="Antes e depois de frase longa no antebraço, 3 sessões"><span class="cap"><b>Frase longa</b><span>3 sessões</span></span></button>
+      <button class="ba" type="button" data-f="tattoo"><span class="tag">Antebraço</span><img src="imagens/DSKe7eyEfxE.jpg" alt="Antes e depois de redoma com rosa no antebraço, 3 sessões"><span class="cap"><b>Rosa na redoma</b><span>3 sessões</span></span></button>
+      <button class="ba" type="button" data-f="tattoo"><span class="tag">Braço</span><img src="imagens/DY-Wc0ICZEr.jpg" alt="Antes e depois de tatuagem floral grande, 4 sessões"><span class="cap"><b>Floral extenso</b><span>4 sessões</span></span></button>
+      <button class="ba" type="button" data-f="tattoo"><span class="tag">Antebraço</span><img src="imagens/DRqMK5DidJ6.jpg" alt="Evolução de tatuagem escrita no antebraço, 5 sessões"><span class="cap"><b>Reta final</b><span>5 sessões</span></span></button>
+      <button class="ba" type="button" data-f="micro"><span class="tag">Sobrancelha</span><img src="imagens/Deg7IbNoJVT.jpg" alt="Antes e depois de remoção de micropigmentação de sobrancelha"><span class="cap"><b>Sem pelos brancos</b><span>Protocolo Five</span></span></button>    </div>
+    <p class="disclaimer">Imagens com divulgação autorizada pelas pacientes. Resultados individuais, com finalidade educativa.</p>
+  </div>
+</section>
+
+<!-- PROTOCOLO -->
+<section class="sec protocol" id="protocolo">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Protocolo Five</span>
+      <h2>Remover é tão importante quanto preservar a saúde da sua pele.</h2>
+      <p>O Tratamento Five une estudo de química, anatomia, fisiologia e citologia a um laser de alta tecnologia. O objetivo é quebrar o pigmento com eficiência e respeitar a integridade da pele e dos pelos em todas as etapas.</p>
+    </div>
+    <div class="steps">
+      <div class="step rv"><i>1</i><b>Avaliação</b><span>Leitura da tatuagem: cores, camadas, profundidade e região do corpo.</span></div>
+      <div class="step rv"><i>2</i><b>Plano individual</b><span>Remoção completa ou clareamento para cobertura, com cronograma pensado para a sua data.</span></div>
+      <div class="step rv"><i>3</i><b>Sessão a laser</b><span>O laser fragmenta a tinta. O branqueamento que aparece na hora (efeito frosting) é passageiro.</span></div>
+      <div class="step rv"><i>4</i><b>Intervalo e cuidado</b><span>Seu organismo elimina os fragmentos com tempo. Paciência e constância trazem o resultado bonito.</span></div>
+    </div>
+    <div class="protocol-photos">
+      <figure><img src="imagens/DcosEr6z23M.jpg" alt="Dra. Anna Luíza ao lado do laser na sala de atendimento"><figcaption>A chegada do laser padrão-ouro à Five Clinic</figcaption></figure>
+      <div class="quote-box">
+        <p>“Resultados bonitos não vêm da pressa. Vêm da constância, do cuidado e, principalmente, da paciência.”</p>
+        <small>Dra. Anna Luíza Cardoso</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="sec" id="tratamentos">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Tratamentos</span>
+      <h2>Tudo o que você quer deixar para trás, e o que quer realçar</h2>
+    </div>
+    <div class="services">
+      <article class="svc rv">
+        <div class="arch"><img src="imagens/DfEBO2bujXz.jpg" alt="Remoção de tatuagem no punho"></div>
+        <b>Remoção de tatuagem</b>
+        <p>Pretas, coloridas e até pigmentos vermelhos e alaranjados, que exigem conhecimento avançado. Sem manchas, bolhas ou cicatrizes quando feita por profissional capacitada.</p>
+        <a class="more" href="https://wa.me/5533984632079?text=Ol%C3%A1!%20Quero%20saber%20sobre%20remo%C3%A7%C3%A3o%20de%20tatuagem." target="_blank" rel="noopener">Falar sobre minha tatuagem →</a>
+      </article>
+      <article class="svc rv">
+        <div class="arch"><img src="imagens/Deg7IbNoJVT.jpg" alt="Remoção de micropigmentação de sobrancelha"></div>
+        <b>Remoção de micropigmentação</b>
+        <p>Sobrancelhas pesadas, escurecidas ou refeitas várias vezes. O Protocolo Five remove sem pelos brancos, sem quebra e sem queda, e revela de novo os seus fios naturais.</p>
+        <a class="more" href="https://wa.me/5533984632079?text=Ol%C3%A1!%20Quero%20saber%20sobre%20remo%C3%A7%C3%A3o%20de%20micropigmenta%C3%A7%C3%A3o." target="_blank" rel="noopener">Avaliar minha sobrancelha →</a>
+      </article>
+      <article class="svc rv">
+        <div class="arch"><img src="imagens/DfD60RBDn-f.jpg" alt="Dra. Anna Luíza em consulta de harmonização facial"></div>
+        <b>Harmonização facial</b>
+        <p>Preenchimento labial e botox planejados para cada rosto, sem excessos. Um cuidado a mais para chegar ao casamento com a sua beleza natural realçada.</p>
+        <a class="more" href="https://wa.me/5533984632079?text=Ol%C3%A1!%20Quero%20saber%20sobre%20harmoniza%C3%A7%C3%A3o%20facial." target="_blank" rel="noopener">Conhecer a harmonização →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- DRA -->
+<section class="sec doctor" id="dra">
+  <div class="wrap doc-grid">
+    <div class="doc-photos rv">
+      <div class="main"><img src="imagens/DfD60RBDn-f.jpg" alt="Dra. Anna Luíza Cardoso em seu consultório"></div>
+      <div class="sub"><img src="imagens/Dfv2oTuFq07.jpg" alt="Dra. Anna Luíza no espelho em arco da clínica"></div>
+    </div>
+    <div class="doc-txt">
+      <span class="eyebrow">Quem cuida de você</span>
+      <h2>Dra. Anna Luíza Cardoso<small>Especialista em remoção a laser</small></h2>
+      <p>Remover pigmento envolve célula, tecido, química, física, resposta inflamatória e o comportamento de cada tinta. Por isso a Dra. Anna estuda sem parar e leva a Governador Valadares o que há de mais avançado em conhecimento e tecnologia na remoção a laser.</p>
+      <ul class="creds">
+        <li><svg aria-hidden="true"><use href="#i-star"/></svg><span>Pós-graduada em Aplicação de Laser na Saúde e na Estética</span></li>
+        <li><svg aria-hidden="true"><use href="#i-star"/></svg><span>Presença constante em congressos nacionais da área</span></li>
+        <li><svg aria-hidden="true"><use href="#i-star"/></svg><span>Criadora do Protocolo Five de remoção saudável</span></li>
+        <li><svg aria-hidden="true"><use href="#i-star"/></svg><span>Formação em Harmonização Facial</span></li>
+      </ul>
+      <span class="sign" aria-hidden="true">Anna Luíza</span>
+    </div>
+  </div>
+</section>
+
+<!-- ESPAÇO -->
+<section class="sec" id="clinica">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">A nova clínica</span>
+      <h2>Um espaço pensado em cada detalhe para receber você</h2>
+      <p>“Cada detalhe dessa clínica carrega um pedacinho de mim.” Madeira, luz suave e privacidade para você viver o tratamento com tranquilidade.</p>
+    </div>
+    <div class="space">
+      <figure class="rv"><img src="imagens/DfD-MoLOG6r.jpg" alt="Espelho em arco e ambiente claro da Five Clinic"></figure>
+      <figure class="rv"><img src="imagens/DdPNEH1zo5y.jpg" alt="Inauguração da nova Five Clinic com laço vermelho na porta"></figure>
+      <figure class="rv"><img src="imagens/DcosEr6z23M.jpg" alt="Sala de procedimentos com o laser"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="duvidas" style="padding-top:clamp(40px,6vw,80px)">
+  <div class="wrap faq-grid">
+    <div class="sec-head">
+      <span class="eyebrow">Dúvidas frequentes</span>
+      <h2>O que as noivas mais perguntam</h2>
+      <p>Não encontrou a sua dúvida? Mande uma mensagem e a Dra. Anna responde.</p>
+      <div><a class="btn btn-ghost" href="https://wa.me/5533984632079?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20remo%C3%A7%C3%A3o%20a%20laser." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Perguntar no WhatsApp</a></div>
+    </div>
+    <div class="faq">
+      <details open><summary>Com quanto tempo de antecedência devo começar?</summary><p>Quanto antes, melhor. O intervalo entre as sessões respeita o tempo que o seu organismo leva para eliminar a tinta, então tatuagens maiores ou com mais cor pedem um cronograma mais longo. Na avaliação a Dra. monta o plano de acordo com a data do seu casamento.</p></details>
+      <details><summary>A remoção deixa cicatriz ou mancha?</summary><p>Não. Lesões não fazem parte do processo de remoção. Quando realizado por profissional capacitado, o tratamento não causa manchas, bolhas ou cicatrizes. Segurança é prioridade no Protocolo Five.</p></details>
+      <details><summary>Quantas sessões vou precisar?</summary><p>Depende da quantidade de tinta depositada, das cores usadas, da profundidade e da região do corpo. Nos resultados acima há casos com 1, 3, 4 e 5 sessões. O número para o seu caso é definido na avaliação.</p></details>
+      <details><summary>Não dá tempo de remover tudo. E agora?</summary><p>O clareamento também é uma opção. Algumas sessões já podem suavizar bastante o desenho, e o laser também prepara a pele para quem quer fazer uma nova tatuagem por cima, com mais nitidez.</p></details>
+      <details><summary>Tatuagens coloridas ou vermelhas saem?</summary><p>Pigmentos vermelhos e alaranjados estão entre os maiores desafios da remoção a laser, porque têm compostos químicos muito estáveis. Exigem conhecimento avançado, e a Five trata esses casos com frequência.</p></details>
+      <details><summary>Por que a pele fica branquinha logo após a sessão?</summary><p>É o efeito frosting, uma reação instantânea e passageira ao laser. Ele some em pouco tempo e indica que o pigmento foi atingido.</p></details>
+      <details><summary>Remover a sobrancelha deixa os pelos brancos?</summary><p>Não com o Protocolo Five. Ele foi desenvolvido para remover a micropigmentação sem causar pelos brancos, quebra ou queda dos fios.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="sec final" id="contato">
+  <canvas id="sparkle2" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <span class="eyebrow">Comece a contagem regressiva</span>
+    <h2>O seu <span class="script shine">sim</span> começa com uma avaliação.</h2>
+    <p>Agende pelo WhatsApp e conte a data do seu casamento. A Dra. Anna avalia a sua tatuagem e monta um plano feito para você.</p>
+    <a class="btn btn-gold" href="https://wa.me/5533984632079?text=Ol%C3%A1%2C%20Dra.%20Anna!%20Vou%20me%20casar%20e%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar minha avaliação</a>
+    <div class="contact-row">
+      <span><svg aria-hidden="true"><use href="#i-wa"/></svg>(33) 98463-2079</span>
+      <span><svg aria-hidden="true"><use href="#i-pin"/></svg>Rua Benjamin Constant, Centro · Governador Valadares – MG · CEP 35010-060</span>
+      <a href="https://www.instagram.com/five_clinic/" target="_blank" rel="noopener"><span><svg aria-hidden="true"><use href="#i-ig"/></svg>@five_clinic</span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="logo-txt"><b>FIVE</b></span>
+    <span>Five Clinic · Dra. Anna Luíza Cardoso · Remoção de tatuagem e micropigmentação a laser em Governador Valadares</span>
+    <span>Resultados variam de pessoa para pessoa.</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5533984632079?text=Ol%C3%A1%2C%20Dra.%20Anna!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Foto ampliada">
+  <button type="button" id="lb-close" aria-label="Fechar">×</button>
+  <figure><img id="lb-img" alt=""><figcaption id="lb-cap"></figcaption></figure>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Brilho: partículas douradas */
+  function sparkle(id, density){
+    var c=document.getElementById(id); if(!c||reduce) return;
+    var ctx=c.getContext('2d'), w, h, dpr=Math.min(window.devicePixelRatio||1,2), parts=[];
+    function size(){ w=c.offsetWidth; h=c.offsetHeight; c.width=w*dpr; c.height=h*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+      var n=Math.round(w*h/density); parts=[]; for(var i=0;i<n;i++) parts.push(make(true)); }
+    function make(init){ return {x:Math.random()*w, y:init?Math.random()*h:h+10, r:Math.random()*1.6+.4, vy:-(Math.random()*.25+.05), t:Math.random()*Math.PI*2, s:Math.random()*.03+.01, star:Math.random()<.18}; }
+    function draw(){
+      ctx.clearRect(0,0,w,h);
+      for(var i=0;i<parts.length;i++){ var p=parts[i]; p.y+=p.vy; p.t+=p.s; if(p.y<-10) parts[i]=p=make(false);
+        var a=(Math.sin(p.t)+1)/2*.85+.1;
+        ctx.globalAlpha=a; ctx.fillStyle= i%3? '#D9B979':'#F3E3BC';
+        if(p.star){ var r=p.r*3.2; ctx.beginPath(); ctx.moveTo(p.x,p.y-r); ctx.quadraticCurveTo(p.x,p.y,p.x+r,p.y); ctx.quadraticCurveTo(p.x,p.y,p.x,p.y+r); ctx.quadraticCurveTo(p.x,p.y,p.x-r,p.y); ctx.quadraticCurveTo(p.x,p.y,p.x,p.y-r); ctx.fill(); }
+        else { ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fill(); }
+      }
+      ctx.globalAlpha=1; requestAnimationFrame(draw);
+    }
+    size(); window.addEventListener('resize', size); draw();
+  }
+  sparkle('sparkle', 9000); sparkle('sparkle2', 7000);
+
+  /* Reveal suave (conteúdo sempre visível) */
+  if(!reduce && 'IntersectionObserver' in window){
+    var els=[].slice.call(document.querySelectorAll('.rv'));
+    var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.remove('pre'); io.unobserve(e.target);} }); },{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el){ var r=el.getBoundingClientRect(); if(r.top>innerHeight){ el.classList.add('pre'); io.observe(el);} });
+  }
+
+  /* Planejador da noiva */
+  var input=document.getElementById('wedding-date');
+  var num=document.getElementById('plan-months'), unit=document.getElementById('plan-unit'), title=document.getElementById('plan-title'), text=document.getElementById('plan-text'), cta=document.getElementById('plan-cta');
+  var today=new Date(); today.setHours(0,0,0,0);
+  var minD=new Date(today); input.min=minD.toISOString().slice(0,10);
+  function fmt(d){ return d.toLocaleDateString('pt-BR',{day:'2-digit',month:'long',year:'numeric'}); }
+  function update(){
+    if(!input.value) return;
+    var parts=input.value.split('-'), d=new Date(+parts[0], +parts[1]-1, +parts[2]);
+    var days=Math.round((d-today)/864e5);
+    var msg='Olá, Dra. Anna! Vou me casar em '+fmt(d)+' e quero planejar a remoção/clareamento da minha tatuagem.';
+    cta.href='https://wa.me/5533984632079?text='+encodeURIComponent(msg);
+    if(days<0){ num.textContent='—'; unit.textContent='essa data já passou'; title.textContent='Confira a data escolhida'; text.textContent='Escolha a data do seu casamento para ver o planejamento sugerido.'; return; }
+    var months=Math.floor(days/30.44);
+    if(months>=1){ num.textContent=months; unit.textContent= months===1?'mês até o altar':'meses até o altar'; }
+    else { num.textContent=days; unit.textContent= days===1?'dia até o altar':'dias até o altar'; }
+    if(months>=10){ title.textContent='Tempo ideal para buscar a remoção completa';
+      text.textContent='Você tem tempo para seguir o protocolo com calma, respeitando o intervalo que a pele precisa entre as sessões. Agende a avaliação agora e saia com o seu cronograma até o grande dia.'; }
+    else if(months>=5){ title.textContent='Dá para avançar muito: comece já';
+      text.textContent='Com alguns meses pela frente, é possível clarear bastante e, em muitos casos, chegar perto da remoção. Cada semana conta para encaixar as sessões com o intervalo certo.'; }
+    else if(months>=2){ title.textContent='Foco em clarear para o grande dia';
+      text.textContent='O plano prioriza o clareamento para que a tatuagem fique bem mais suave e fácil de disfarçar com maquiagem. A última sessão é programada com folga para a pele estar íntegra nas fotos.'; }
+    else { title.textContent='Fale com a Dra. Anna o quanto antes';
+      text.textContent='Com pouco tempo, a avaliação define se vale fazer uma sessão agora ou começar logo após o casamento, sem arriscar a pele no dia. A Dra. orienta o melhor caminho para você.'; }
+  }
+  input.addEventListener('change', update); input.addEventListener('input', update);
+
+  /* Filtros da galeria */
+  var chips=[].slice.call(document.querySelectorAll('.chip')), items=[].slice.call(document.querySelectorAll('#gallery .ba:not([hidden])'));
+  chips.forEach(function(ch){ ch.addEventListener('click', function(){
+    chips.forEach(function(c){ c.setAttribute('aria-pressed', c===ch?'true':'false'); });
+    var f=ch.dataset.f; items.forEach(function(it){ it.hidden = !(f==='all' || it.dataset.f===f); });
+  }); });
+
+  /* Lightbox */
+  var lb=document.getElementById('lb'), lbi=document.getElementById('lb-img'), lbc=document.getElementById('lb-cap'), last=null;
+  items.forEach(function(it){ it.addEventListener('click', function(){
+    var img=it.querySelector('img'); last=it; lbi.src=img.src; lbi.alt=img.alt; lbc.textContent=img.alt; lb.hidden=false; document.getElementById('lb-close').focus(); }); });
+  function close(){ lb.hidden=true; if(last) last.focus(); }
+  document.getElementById('lb-close').addEventListener('click', close);
+  lb.addEventListener('click', function(e){ if(e.target===lb) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && !lb.hidden) close(); });
+})();
+</script>
+
+</body>
+</html>
